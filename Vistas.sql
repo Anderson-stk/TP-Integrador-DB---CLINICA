@@ -31,7 +31,7 @@ CREATE OR ALTER VIEW TurnosDelDia AS SELECT
     M.Matricula,
     E.Nombre AS Especialidad,
     T.Observaciones,
-    T.FechaAlta FROM dbo.Turnos T
+    T.FechaAlta FROM Turnos T
 INNER JOIN EstadoTurno ET ON ET.IDEstadoTurno = T.IDEstadoTurno
 INNER JOIN Pacientes PA ON PA.IDPaciente = T.IDPaciente
 INNER JOIN Personas PP ON PP.IDPersona = PA.IDPersona

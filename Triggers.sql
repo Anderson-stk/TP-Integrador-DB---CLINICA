@@ -69,7 +69,7 @@ BEGIN
     IF EXISTS (
         SELECT 1
         FROM inserted i
-        INNER JOIN dbo.Turnos T
+        INNER JOIN Turnos T
             ON T.IDMedico = i.IDMedico
            AND T.Fecha = i.Fecha
            AND T.Hora = i.Hora
@@ -83,7 +83,7 @@ BEGIN
     IF EXISTS (
         SELECT 1
         FROM inserted i
-        INNER JOIN dbo.Turnos T
+        INNER JOIN Turnos T
             ON T.IDPaciente = i.IDPaciente
            AND T.Fecha = i.Fecha
            AND T.Hora = i.Hora

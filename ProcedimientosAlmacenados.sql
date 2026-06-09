@@ -47,7 +47,7 @@ BEGIN
             SELECT 1
             FROM HorariosMedicos HM
             WHERE HM.IDMedico = @IDMedico
-              AND HM.DiaSemana = DATEPART(WEEKDAY, @Fecha)ok
+              AND HM.DiaSemana = DATEPART(WEEKDAY, @Fecha)
               AND @Hora >= HM.HoraInicio
               AND @Hora < HM.HoraFin
         )
